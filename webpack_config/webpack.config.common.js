@@ -1,16 +1,27 @@
 const path = require( 'path' );
 const HtmlWebpackPlugin = require( 'html-webpack-plugin' );
+const CopyWebpackPlugin = require( 'copy-webpack-plugin' );
+const { ASSETS_PATH } = require( './constants/paths' );
 
 const config = {
-  entry: './src/index.js',
+  entry: './index.js',
   output: {
     filename: 'main.js',
-    path: path.resolve( __dirname, '../build' )
+    path: path.resolve( __dirname, '../build' ),
+    publicPath: '/',
   },
-  plugins: [
+  context: path.resolve( __dirname, '../src' ),
 
+  plugins: [
+    new CopyWebpackPlugin( [
+                             {
+                               from: '../src/assets/images', to: '../build/assets/images',
+                             },
+                             {
+                               from: '../src/assets/fonts', to: '../build/assets/fonts',
+                             }] ),
     new HtmlWebpackPlugin( {
-                             template: './src/index.html',
+                             template: 'index.html',
                              meta: {
                                viewport: 'width=device-width, initial-scale=1',
                              }
@@ -26,11 +37,10 @@ const config = {
         use: [
           {
             loader: 'file-loader',
-
             options: {
               name: '[name].[ext]',
-              outputPath: 'static/images/',
-              publicPath: 'static/images/',
+              outputPath: 'assets/images',
+              publicPath: 'assets/images',
             }
           }
         ]
@@ -45,8 +55,8 @@ const config = {
             loader: 'file-loader',
             options: {
               name: '[name].[ext]',
-              outputPath: 'static/fonts/',
-              publicPath: 'static/fonts/',
+              outputPath: 'assets/fonts',
+              publicPath: 'assets/fonts',
             }
           }
         ]

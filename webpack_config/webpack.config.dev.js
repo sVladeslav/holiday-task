@@ -1,7 +1,7 @@
 const path = require( 'path' );
 const merge = require( 'webpack-merge' );
 const commonConfig = require( './webpack.config.common.js' );
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const BundleAnalyzerPlugin = require( 'webpack-bundle-analyzer' ).BundleAnalyzerPlugin;
 
 const developmentConfig = merge( commonConfig, {
   mode: 'development',
@@ -9,14 +9,12 @@ const developmentConfig = merge( commonConfig, {
   devServer: {
     contentBase: path.join( __dirname, '../build' ),
   },
-  plugins: [
-    new BundleAnalyzerPlugin()
-  ],
+
   module: {
     rules: [
       /*
-      * STYLES RULE
-      * */
+       * STYLES RULE
+       * */
       {
         test: /\.(c|sa|sc)ss$/,
         use: [
@@ -25,6 +23,9 @@ const developmentConfig = merge( commonConfig, {
             loader: 'css-loader',
             options: {
               modules: true,
+              url: true,
+              sourceMap: true,
+              importLoaders: 1,
             }
           },
           'sass-loader',
