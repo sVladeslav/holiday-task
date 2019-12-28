@@ -25,7 +25,7 @@ const developmentConfig = merge( commonConfig, {
               modules: true,
               url: true,
               sourceMap: true,
-              importLoaders: 1,
+              importLoaders: 2,
             }
           },
           'sass-loader',

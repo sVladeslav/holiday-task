@@ -3,7 +3,7 @@ const merge = require( 'webpack-merge' );
 const commonConfig = require( './webpack.config.common.js' );
 const MiniCssExtractPlugin = require( 'mini-css-extract-plugin' );
 const { CleanWebpackPlugin } = require( 'clean-webpack-plugin' );
-const { ASSETS_PATH } = require( './constants/paths' );
+const UglifyJSPlugin = require( 'uglifyjs-webpack-plugin' );
 
 const productionConfig = merge( commonConfig, {
   mode: 'production',
@@ -21,7 +21,8 @@ const productionConfig = merge( commonConfig, {
   },
   plugins: [
     new CleanWebpackPlugin(),
-    new MiniCssExtractPlugin(  ),
+    new MiniCssExtractPlugin(),
+    new UglifyJSPlugin(),
   ],
   module: {
     rules: [
