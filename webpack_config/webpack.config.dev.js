@@ -22,7 +22,6 @@ const developmentConfig = merge( commonConfig, {
           {
             loader: 'css-loader',
             options: {
-              modules: true,
               url: true,
               sourceMap: true,
               importLoaders: 2,
