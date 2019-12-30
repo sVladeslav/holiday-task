@@ -18,13 +18,10 @@ const config = {
                                from: '../src/assets/images', to: '../build/assets/images',
                              },
                              {
-                               from: '../src/assets/fonts', to: '../build/assets/fonts',
-                             },
-                             {
                                from: '../src/data', to: '../build/data',
                              },
                            ] ),
-    new MiniCssExtractPlugin(),
+    new MiniCssExtractPlugin( ),
 
     new HtmlWebpackPlugin( {
                              template: 'index.html',

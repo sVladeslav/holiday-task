@@ -1,35 +1,38 @@
 [
   {
     "name": "Test",
-    "profilePicture": "./assets/images/team-2.jpg",
     "contacts": [
-      "f",
-      "i",
-      "g"
-    ]
+      "test",
+      "test",
+      "facebook/sdfsdf"
+    ],
+    "profilePicture": "./assets/images/team-2.jpg"
   },
   {
     "name": "Test",
     "contacts": [
-      "f",
-      "i",
-      "g"
-    ]
+      "test",
+      "test",
+      "facebook/sdfsdf"
+    ],
+    "profilePicture": "./assets/images/team-2.jpg"
   },
   {
     "name": "Test",
     "contacts": [
-      "f",
-      "i",
-      "g"
-    ]
+      "test",
+      "test",
+      "facebook/sdfsdf"
+    ],
+    "profilePicture": "./assets/images/team-2.jpg"
   },
   {
     "name": "Test",
     "contacts": [
-      "f",
-      "i",
-      "g"
-    ]
+      "test",
+      "test",
+      "facebook/sdfsdf"
+    ],
+    "profilePicture": "./assets/images/team-2.jpg"
   }
 ]
