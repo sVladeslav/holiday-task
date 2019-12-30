@@ -1,0 +1,35 @@
+[
+  {
+    "name": "Test",
+    "profilePicture": "./assets/images/team-2.jpg",
+    "contacts": [
+      "f",
+      "i",
+      "g"
+    ]
+  },
+  {
+    "name": "Test",
+    "contacts": [
+      "f",
+      "i",
+      "g"
+    ]
+  },
+  {
+    "name": "Test",
+    "contacts": [
+      "f",
+      "i",
+      "g"
+    ]
+  },
+  {
+    "name": "Test",
+    "contacts": [
+      "f",
+      "i",
+      "g"
+    ]
+  }
+]

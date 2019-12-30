@@ -1,11 +1,10 @@
 const path = require( 'path' );
 const merge = require( 'webpack-merge' );
 const commonConfig = require( './webpack.config.common.js' );
-const BundleAnalyzerPlugin = require( 'webpack-bundle-analyzer' ).BundleAnalyzerPlugin;
 
 const developmentConfig = merge( commonConfig, {
   mode: 'development',
-  devtool: 'eval',
+  devtool: 'eval-source-map',
   devServer: {
     contentBase: path.join( __dirname, '../build' ),
   },

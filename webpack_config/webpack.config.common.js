@@ -1,7 +1,6 @@
 const path = require( 'path' );
 const HtmlWebpackPlugin = require( 'html-webpack-plugin' );
 const CopyWebpackPlugin = require( 'copy-webpack-plugin' );
-const { ASSETS_PATH } = require( './constants/paths' );
 
 const config = {
   entry: './index.js',
@@ -18,7 +17,11 @@ const config = {
                              },
                              {
                                from: '../src/assets/fonts', to: '../build/assets/fonts',
-                             }] ),
+                             },
+                             {
+                               from: '../src/data', to: '../build/data',
+                             },
+                           ] ),
     new HtmlWebpackPlugin( {
                              template: 'index.html',
                              meta: {

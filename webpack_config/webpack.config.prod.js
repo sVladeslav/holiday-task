@@ -21,8 +21,7 @@ const productionConfig = merge( commonConfig, {
   },
   plugins: [
     new CleanWebpackPlugin(),
-    new MiniCssExtractPlugin(),
-    new UglifyJSPlugin(),
+    new MiniCssExtractPlugin( ),
   ],
   module: {
     rules: [
@@ -34,9 +33,6 @@ const productionConfig = merge( commonConfig, {
         use: [
           {
             loader: MiniCssExtractPlugin.loader,
-            options: {
-              esModule: true
-            }
           },
           {
             loader: 'css-loader',

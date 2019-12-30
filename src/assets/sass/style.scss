@@ -1,32 +1,8 @@
-$mobile-end: 568px;
-$tablet-end: 768px;
-/*
-l;sdjfgskl j;lsk fjglkshfdlgklksj hfjklsfh gkljhsdlkfj ghlskjdfhglkjh
 
-*/
-body{
-  background-image: url('../images/banner.jpg');
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-content: center;
-}
 
 .test{
   color: green;
+  background-image: url("../images/banner.jpg");
 }
 
-@media screen and (max-width: $mobile-end) {
-  .test{
-    color: red;
-  }
-}
 
-@media screen and (max-width: $mobile-end) {
-  .test{
-    font-size: 60px;
-  }
-}
