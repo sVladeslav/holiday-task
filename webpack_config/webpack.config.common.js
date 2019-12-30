@@ -1,6 +1,8 @@
 const path = require( 'path' );
 const HtmlWebpackPlugin = require( 'html-webpack-plugin' );
 const CopyWebpackPlugin = require( 'copy-webpack-plugin' );
+const MiniCssExtractPlugin = require( 'mini-css-extract-plugin' );
+const MediaQueryPlugin = require( 'media-query-plugin' );
 
 const config = {
   entry: './index.js',
@@ -22,6 +24,8 @@ const config = {
                                from: '../src/data', to: '../build/data',
                              },
                            ] ),
+    new MiniCssExtractPlugin(),
+
     new HtmlWebpackPlugin( {
                              template: 'index.html',
                              meta: {
@@ -31,6 +35,40 @@ const config = {
   ],
   module: {
     rules: [
+      /*
+       * STYLES RULE
+       * */
+      {
+        test: /\.(c|sa|sc)ss$/,
+        use: [
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              hmr: process.env.NODE_ENV === 'development',
+            }
+          },
+          {
+            loader: 'css-loader',
+            options: {
+              sourceMap: true,
+              url: true,
+            }
+          },
+          MediaQueryPlugin.loader,
+
+          {
+            loader: 'postcss-loader',
+            options: {
+              sourceMap: true,
+              plugins: (loader) => [
+                require( 'autoprefixer' ),
+                require( 'cssnano' ),
+              ]
+            }
+          },
+          'sass-loader',
+        ],
+      },
       /*
        * IMAGES RULE
        * */

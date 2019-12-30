@@ -1,1 +1,0 @@
-export const sum = (...rest) => rest.reduce( (sum, currentValue) => sum += currentValue, 0 );
