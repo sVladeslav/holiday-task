@@ -1,3 +1,6 @@
+@import "banner";
+@import "burgerButton";
+@import "navigation";
 @import "footer";
 
 body {
@@ -30,6 +33,18 @@ a{
 }
 
 a:hover, a:active{
-
   transition: background-color, color, 0.3s;
+}
+
+.button{
+  background-color: $accent-color;
+  text-transform: uppercase;
+  padding: 15px 40px;
+  color: white;
+  width: max-content;
+  margin: 0 auto;
+  border-radius: 3px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
 }
