@@ -14,7 +14,7 @@
   width: 100%;
   background-color: rgba(0, 0, 0, 0.9);
   opacity: 0;
-  transition: all 1s;
+  transition: all 0.5s;
   display: none;
 
   ul {
@@ -34,12 +34,22 @@
 
   @media screen and (min-width: $lg) {
     display: block;
+    font-size: 15px;
+    position: relative;
+    opacity: 1;
+    background-color: rgba(0,0,0,0);
+    width: 50%;
+    height: inherit;
 
-      ul{
-        display: flex;
-        justify-content: space-between;
-        width: 60%;
+    ul{
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+
+      a:hover, a:active{
+        color: white;
       }
+    }
   }
 }
 

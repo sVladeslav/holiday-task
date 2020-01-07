@@ -1,0 +1,86 @@
+@import "break-points";
+@import "theme";
+
+#teams{
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  text-align: center;
+  padding: 100px 0;
+
+  @media screen and (min-width: $lg) {
+    text-align: left;
+  }
+}
+
+.person{
+  max-width: 280px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 50px;
+
+  img {
+    margin-bottom: 20px;
+    width: inherit;
+  }
+
+  h4, h5, p{
+    font-family: "Raleway", sans-serif;
+    font-weight: 400;
+  }
+
+  h4{
+    margin: 10px 0;
+    font-size: 22px;
+    color: #2d3033;
+  }
+
+  h5{
+    margin: 10px 0 20px;
+    font-size: 13px;
+    text-transform: uppercase;
+    color: #e84545;
+  }
+
+  p{
+    margin-bottom: 10px;
+    line-height: 1.6em;
+    font-size: 14px;
+    color: #6c7279;
+  }
+}
+
+
+i{
+  color: #C6CACC;
+}
+
+.socialIconsContainer{
+  margin-top: auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.socialIconsItem{
+  border: 1px solid rgb(232, 236, 238);
+  border-radius: 2px;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  text-align: left;
+
+      i {
+        position: relative;
+        left: 50%;
+        top: 50%;
+        transform: translateX(-50%) translateY(-50%);
+
+      }
+
+  +.socialIconsItem{
+    margin-left: 10px;
+  }
+}
+
+

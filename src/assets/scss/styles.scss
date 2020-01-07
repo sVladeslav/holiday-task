@@ -1,6 +1,7 @@
 @import "banner";
 @import "burgerButton";
 @import "navigation";
+@import "features";
 @import "footer";
 
 body {
@@ -27,6 +28,7 @@ body {
 }
 
 
+
 a{
   text-decoration: none;
   color: inherit;
@@ -41,10 +43,27 @@ a:hover, a:active{
   text-transform: uppercase;
   padding: 15px 40px;
   color: white;
-  width: max-content;
+  width: max-content; //сам блок идет на всю ширину допустимого пространства
   margin: 0 auto;
-  border-radius: 3px;
+  border-radius: 2px;
   font-family: 'Raleway', sans-serif;
   font-size: 13px;
-  font-weight: 600;
+  font-weight: 700;
+  transition: background-color 0.3s;
+
+  @media screen and (min-width: $lg) {
+    cursor: pointer;
+    line-height: 1.4em;
+    text-decoration-style: solid;
+    :hover{
+
+      //подсвечиваеться только фон текста, без учета падингов
+      //background-color: red;
+    }
+  }
+  }
+@media screen and (min-width: $lg) {
+.button:hover {
+  background-color:red;
+}
 }

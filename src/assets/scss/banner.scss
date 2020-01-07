@@ -1,34 +1,69 @@
-
+@import "break-points";
 
 #banner{
   background-image: url("../images/banner.jpg");
   height: 750px;
-  width: 100vw;
+  //width: 98.9vw;
   z-index: 1;
 }
 
-#header{
+.header{
   height: 105px;
-  width: 90vw;
-  margin: 0 5vw;
-  padding: 30px 0;
+  width: 100vw;
+  //margin: 0 5vw;
+  padding: 30px 8vw;
   position: fixed;
 
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-  border-bottom: 1px solid #66697E;
+  //border-bottom: 1px solid #66697E;
+  transition: height 0.5s;
+
+  @media screen and (min-width: $lg) {
+    //width: 84vw;
+    //margin: 0 8vw;
+    padding: 0 8vw;
+    margin: 0 auto;
+    z-index: 4;
+  }
 }
+
+.header + hr{
+  position: relative;
+  top: 105px;
+  width: 85vw;
+  border-bottom: 0.1px solid #66697E;
+  //height: 0.5px;
+  z-index: -1;
+}
+
+.headerFixed + hr {
+  //display: none;
+}
+
+.headerFixed{
+  height: 74px;
+  background-color: #292C47;
+
+}
+
+//.headerBackground
 
 .containerBanner{
   text-align: center;
   position: relative;
-  top: 40%;
-  transform: translateY(-40%);
+  top: 50%;
+  transform: translateY(-50%);
   color: white;
   z-index: -1;
-}
+  width: 94vw;
+
+  @media screen and (min-width: $lg) {
+    width: 70vw;
+  }
+  }
 
 .containerBanner > h1 {
   text-transform: uppercase;
@@ -36,6 +71,10 @@
   font-family: 'Open Sans', sans-serif;
   line-height: 1.1em;
   margin: 20px 0 10px;
+
+  @media screen and (min-width: $lg) {
+    font-size: 65px;
+  }
 }
 
 .containerBanner > p{
@@ -44,4 +83,8 @@
   font-family: 'Raleway', sans-serif;
   font-weight: 500;
   margin-bottom: 80px;
-}
+
+  @media screen and (min-width: $lg) {
+  font-size: 22px;
+  }
+  }
