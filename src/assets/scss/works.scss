@@ -11,15 +11,35 @@
   flex:1;
   flex-basis: 400px;
   margin: 1px;
-
+  height: 400px;
   overflow: hidden;
   position: relative;
+
+  img{
+    position: relative;
+    transition: transform 0.5s;
+  }
+
+  &:hover{
+
+    img{
+      transform: scale(1.2);
+    }
+
+    .overlay {
+      opacity: 1;
+
+      .nameProject{
+        margin-top: 30%;
+      }
+
+      .designWebsite{
+        margin-top: 5%;
+      }
+    }
+  }
 }
 
-.worksItem > img{
-  z-index: 5;
-  position: relative;
-}
 
 .filter{
   position: absolute;
@@ -30,5 +50,77 @@
   height: 100%;
   width: 100%;
   background-color: rgba(232, 69, 69, 0.9);
-  z-index: 9990;
+
+  opacity: 0;
+
+
 }
+
+
+.nameProject{
+  margin-top: 10%;
+}
+
+.designWebsite{
+  margin-top: 50%;
+}
+
+
+.work{
+
+  overflow: hidden;
+  height: 350px;
+  flex: 1;
+  flex-basis: 400px;
+  position: relative;
+
+  .overlay{
+    transition-property: background-color;
+    transition-duration: 0.6s;
+    //display: none;
+    opacity: 0;
+    background-color: rgba(232, 69, 69, 0.9);
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+
+
+    * {
+      //position: absolute;
+      text-align: center;
+      transition: all 0.5s;
+    }
+  }
+
+  &:hover{
+    .overlay{
+      //display: block;
+
+      opacity: 1;
+
+      .nameProject{
+        margin-top: 35%;
+      }
+
+      .designWebsite{
+        margin-top: 3%;
+      }
+    }
+
+    img{
+      transition-property: transform;
+      transition-duration: 0.6s;
+      transform: scale(1.2);
+      transform-origin: center;
+    }
+  }
+
+
+
+
+
+
+}
+
