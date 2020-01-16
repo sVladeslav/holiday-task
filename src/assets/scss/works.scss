@@ -1,83 +1,71 @@
 
-
-#works{
+#works {
   display: flex;
-  //justify-content: space-between;
-  flex-wrap:wrap;
+  flex-wrap: wrap;
   width: 100%;
 }
 
-.worksItem{
-  flex:1;
+.worksItem {
+  flex: 1;
   flex-basis: 400px;
   margin: 1px;
   height: 400px;
   overflow: hidden;
   position: relative;
 
-  img{
+  img {
     position: relative;
     transition: transform 0.5s;
   }
 
-  &:hover{
+  &:hover {
 
-    img{
+    img {
       transform: scale(1.2);
     }
 
     .overlay {
       opacity: 1;
 
-      .nameProject{
+      .nameProject {
         margin-top: 30%;
       }
 
-      .designWebsite{
+      .designWebsite {
         margin-top: 5%;
       }
     }
   }
 }
 
+.nameProject {
+  margin-top: 50px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
 
-.filter{
-  position: absolute;
-  top: 0;
-  //bottom: 0;
-  //left: 0;
-  //right: 0;
-  height: 100%;
-  width: 100%;
-  background-color: rgba(232, 69, 69, 0.9);
-
-  opacity: 0;
-
-
+.designWebsite {
+  margin-top: 250px;
+  font-weight: 400;
 }
 
 
-.nameProject{
-  margin-top: 10%;
-}
-
-.designWebsite{
-  margin-top: 50%;
-}
-
-
-.work{
-
+.work {
   overflow: hidden;
   height: 350px;
   flex: 1;
   flex-basis: 400px;
   position: relative;
+  cursor: pointer;
 
-  .overlay{
-    transition-property: background-color;
-    transition-duration: 0.6s;
-    //display: none;
+  img {
+    transition-property: transform;
+    transition-duration: 0.8s;
+  }
+
+  .overlay {
+    transition-property: all;
+    transition-duration: 0.8s;
     opacity: 0;
     background-color: rgba(232, 69, 69, 0.9);
     position: absolute;
@@ -88,39 +76,86 @@
 
 
     * {
-      //position: absolute;
       text-align: center;
-      transition: all 0.5s;
+      transition: all 0.8s;
+
+      color: white;
+      font-size: 14px;
     }
   }
 
-  &:hover{
-    .overlay{
-      //display: block;
-
+  &:hover {
+    .overlay {
       opacity: 1;
 
-      .nameProject{
-        margin-top: 35%;
+      .nameProject {
+        margin-top: 155px;
       }
 
-      .designWebsite{
-        margin-top: 3%;
+      .designWebsite {
+        margin-top: 20px;
       }
     }
 
-    img{
-      transition-property: transform;
-      transition-duration: 0.6s;
+    img {
       transform: scale(1.2);
       transform-origin: center;
     }
   }
-
-
-
-
-
-
 }
 
+.workCard {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  background-color: rgba(0, 0, 0, 0.5);
+
+  visibility: hidden;
+  opacity: 0;
+
+  transition: opacity 0.6s;
+
+  z-index: 9999;
+}
+
+.openWorkCard {
+  opacity: 1;
+  visibility: visible;
+}
+
+#photoCard {
+  max-width: 800px;
+  width: 90%;
+  border: 20px solid white;
+  border-radius: 4px;
+
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+
+  img {
+    width: 100%;
+  }
+
+  .closeButton {
+    position: absolute;
+    top: -38px;
+    right: -45px;
+    width: 46px;
+    height: 36px;
+
+    overflow: hidden;
+
+    cursor: pointer;
+
+    z-index: 10000;
+
+    img {
+      width: 100%;
+    }
+  }
+}

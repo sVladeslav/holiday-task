@@ -3,17 +3,17 @@
 const teams = document.getElementById('teams');
 
 
-async function fillEmployees(){
-    try{
+async function fillEmployees() {
+    try {
         const response = await fetch('./data/employees.json');
-        const json = await response.json();
+        const users = await response.json();
 
-        json.forEach( person => {createMemberTeam(person)});
+        users.forEach(person => {
+            createMemberTeam(person)
+        });
     } catch (e) {
-        console.error("Ошибка HTTP: " + e);
+        console.error(e);
     }
-
-    // createMemberTeam()
 }
 
 fillEmployees();
@@ -23,7 +23,7 @@ const createMemberTeam = person => {
     const personItem = document.createElement('div');
     personItem.classList.add('person');
 
-    personItem.appendChild(createPersonFoto(person));
+    personItem.appendChild(createPersonPhoto(person));
     personItem.appendChild(createPersonName(person.name));
     personItem.appendChild(createPersonRole(person.role));
     personItem.appendChild(createPersonDescription(person.description));
@@ -32,12 +32,12 @@ const createMemberTeam = person => {
     teams.appendChild(personItem);
 };
 
-const createPersonFoto = person => {
-  const img = new Image();
-  img.src = person.profilePicture;
-  img.alt = person.name;
+const createPersonPhoto = person => {
+    const img = new Image();
+    img.src = person.profilePicture;
+    img.alt = person.name;
 
-  return img;
+    return img;
 };
 
 const createPersonName = name => {
@@ -69,14 +69,14 @@ const createPersonLink = linkArray => {
     const linkBlock = document.createElement('ul');
     linkBlock.classList.add('socialIconsContainer');
 
-    linkArray.forEach( oneLink => {
+    linkArray.forEach(oneLink => {
 
 
         const linkItem = document.createElement("li");
         linkItem.classList.add('socialIconsItem');
 
         const link = document.createElement('a');
-        link.setAttribute('href',oneLink);
+        link.setAttribute('href', oneLink);
 
         const linkIcon = document.createElement('i');
         linkIcon.classList.add("fab");

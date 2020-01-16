@@ -15,6 +15,7 @@ body {
 
 * {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 
@@ -28,22 +29,21 @@ body {
 }
 
 
-
-a{
+a {
   text-decoration: none;
   color: inherit;
 }
 
-a:hover, a:active{
+a:hover, a:active {
   transition: background-color, color, 0.3s;
 }
 
-.button{
+.button {
   background-color: $accent-color;
   text-transform: uppercase;
   padding: 15px 40px;
   color: white;
-  width: max-content; //сам блок идет на всю ширину допустимого пространства
+  width: max-content;
   margin: 0 auto;
   border-radius: 2px;
   font-family: 'Raleway', sans-serif;
@@ -55,15 +55,8 @@ a:hover, a:active{
     cursor: pointer;
     line-height: 1.4em;
     text-decoration-style: solid;
-    :hover{
-
-      //подсвечиваеться только фон текста, без учета падингов
-      //background-color: red;
+    &:hover {
+      background-color: red;
     }
   }
-  }
-@media screen and (min-width: $lg) {
-.button:hover {
-  background-color:red;
-}
 }

@@ -1,7 +1,7 @@
 @import "break-points";
 @import "theme";
 
-#teams{
+#teams {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
@@ -13,7 +13,7 @@
   }
 }
 
-.person{
+.person {
   max-width: 280px;
   display: flex;
   flex-direction: column;
@@ -24,25 +24,25 @@
     width: inherit;
   }
 
-  h4, h5, p{
+  h4, h5, p {
     font-family: "Raleway", sans-serif;
     font-weight: 400;
   }
 
-  h4{
+  h4 {
     margin: 10px 0;
     font-size: 22px;
     color: #2d3033;
   }
 
-  h5{
+  h5 {
     margin: 10px 0 20px;
     font-size: 13px;
     text-transform: uppercase;
     color: #e84545;
   }
 
-  p{
+  p {
     margin-bottom: 10px;
     line-height: 1.6em;
     font-size: 14px;
@@ -51,35 +51,36 @@
 }
 
 
-i{
+i {
   color: #C6CACC;
 }
 
-.socialIconsContainer{
+.socialIconsContainer {
   margin-top: auto;
   width: 100%;
   display: flex;
   justify-content: center;
 }
 
-.socialIconsItem{
+.socialIconsItem {
   border: 1px solid rgb(232, 236, 238);
   border-radius: 2px;
   cursor: pointer;
   width: 40px;
   height: 40px;
   text-align: left;
+  transition: background-color 0.6s;
 
-      i {
-        position: relative;
-        left: 50%;
-        top: 50%;
-        transform: translateX(-50%) translateY(-50%);
+  i {
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
 
-      }
+  }
 
-  +.socialIconsItem{
-    margin-left: 10px;
+  &:hover {
+    background-color: $accent-color;
   }
 }
 
