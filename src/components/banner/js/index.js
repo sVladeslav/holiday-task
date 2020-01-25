@@ -23,7 +23,7 @@ burger.onclick = function () {
 function fixedHeader() {
     const heightTop = window.pageYOffset;
 
-    if (heightTop > 1) {
+    if (heightTop > 10) {
         header.classList.add("headerFixed");
     } else {
         header.classList.remove("headerFixed");

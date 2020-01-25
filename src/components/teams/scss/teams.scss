@@ -81,8 +81,10 @@ i {
 
   }
 
-  &:hover {
-    background-color: $accent-color;
+  @media screen and (min-width: $lg) {
+    &:hover {
+      background-color: $accent-color;
+    }
   }
 }
 
