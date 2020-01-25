@@ -5,38 +5,6 @@
   width: 100%;
 }
 
-.worksItem {
-  flex: 1;
-  flex-basis: 400px;
-  margin: 1px;
-  height: 400px;
-  overflow: hidden;
-  position: relative;
-
-  img {
-    position: relative;
-    transition: transform 0.5s;
-  }
-
-  &:hover {
-
-    img {
-      transform: scale(1.2);
-    }
-
-    .overlay {
-      opacity: 1;
-
-      .nameProject {
-        margin-top: 30%;
-      }
-
-      .designWebsite {
-        margin-top: 5%;
-      }
-    }
-  }
-}
 
 .nameProject {
   margin-top: 50px;
@@ -52,9 +20,9 @@
 
 .work {
   overflow: hidden;
-  height: 350px;
+  height: 320px;
   flex: 1;
-  flex-basis: 400px;
+  flex-basis: 320px;
   position: relative;
   cursor: pointer;
 
@@ -89,7 +57,7 @@
       opacity: 1;
 
       .nameProject {
-        margin-top: 155px;
+        margin-top: 145px;
       }
 
       .designWebsite {

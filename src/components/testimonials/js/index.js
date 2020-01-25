@@ -1,20 +1,18 @@
 'use strict';
 import {createNewRadio} from "./radio";
-import {changeSlide, autoChangeSlide} from "./changeSlide";
+import { autoChangeSlide, setCountSlides} from "./changeSlide";
+import {loadImage, loadJSON} from "../../../utils";
 
 
 const uploadTestimonials = async () => {
-    try {
-        const response = await fetch('./data/slides.json');
-        const slides = await response.json();
+        const slides = await loadJSON('./data/slides.json');
+
+        setCountSlides(slides.length);
 
         slides.forEach((slide, index) => {
             if (index < 7) addSlide(slide, index);
             else return 0;
         });
-    } catch (e) {
-        console.log(e);
-    }
 };
 
 const addSlide = (slide, index) => {
@@ -30,7 +28,9 @@ const createSlide = (slide, index) => {
     if (index === 0) slideItem.classList.add('activeSlide');
     slideItem.setAttribute('id', `slide#${index}`);
 
-    slideItem.appendChild(createImg(slide.imageUrl));
+    slideItem.appendChild(
+        loadImage(slide.imageUrl,"testimonials", "./assets/images/onError/picture.jpg")
+    );
     slideItem.appendChild(createBlockqoute(slide));
 
     radioBox.appendChild(createNewRadio(index));
@@ -38,12 +38,6 @@ const createSlide = (slide, index) => {
     return slideItem;
 };
 
-const createImg = img => {
-    const image = new Image();
-    image.src = img;
-
-    return image;
-};
 
 const createBlockqoute = (slide, index) => {
     const blockquote = document.createElement('blockquote');
@@ -72,4 +66,4 @@ const createQuoteAuthor = author => {
 
 uploadTestimonials();
 
-window.setInterval(autoChangeSlide, 5000);
+window.setInterval(autoChangeSlide, 10000);

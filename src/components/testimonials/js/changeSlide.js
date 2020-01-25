@@ -1,7 +1,8 @@
 'use strict';
 
 export let currentSlide = 0;
-let direct = true;
+let countSlide = 0;
+
 
 export const clickRadio = (event) => {
     currentSlide = event.target.value;
@@ -13,18 +14,20 @@ export const changeSlide = index => {
     const activeSlide = document.querySelector('.activeSlide');
 
     activeSlide.classList.remove('activeSlide');
+    document.querySelector('.changeSlide').classList.remove('changeSlide');
 
     const changesSlide = document.getElementById(`slide#${index}`);
 
     changesSlide.classList.add('activeSlide');
+
+    document.getElementsByTagName('input')[index].classList.add('changeSlide');
 };
 
 export const autoChangeSlide = () => {
-    if (currentSlide === 2) direct = false;
-    else if (currentSlide === 0) direct = true;
-    if (direct) {
-        changeSlide(++currentSlide);
-    } else {
-        changeSlide(--currentSlide);
-    }
+        currentSlide = (currentSlide + 1) % countSlide;
+        changeSlide(currentSlide);
+};
+
+export const setCountSlides = count => {
+  countSlide = count;
 };

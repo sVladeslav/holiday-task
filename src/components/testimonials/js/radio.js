@@ -7,11 +7,8 @@ export const createNewRadio = index => {
   inputElement.setAttribute('value', index);
   inputElement.setAttribute('name', 'changeSlide');
 
+  if (index === 0) inputElement.classList.add('changeSlide');
 
   inputElement.onclick = clickRadio;
-  console.log(inputElement);
   return inputElement;
 };
-
-
-

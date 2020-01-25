@@ -1,14 +1,13 @@
 import './assets/css/reset.css';
 import './assets/scss/layout.scss';
 import './assets/scss/styles.scss';
-import './assets/scss/teams.scss';
-import './assets/scss/works.scss';
-import './assets/scss/testimonials.scss';
+import './components/testimonials/scss/testimonials.scss';
+import './assets/scss/downloadSection.scss';
 
-import './assets/js/headerFuncional.js';
-import './assets/js/fillTeam.js';
-import './assets/js/works.js';
-import './assets/js/slider.js';
+import './components/banner/js';
+import './components/teams/js';
+import './components/works/js';
+import './components/testimonials/js';
 
 
 

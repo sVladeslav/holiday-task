@@ -5,8 +5,8 @@
     "description": "Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Maecenas sed diam eget risus varius blandit sit amet non magna. Nullam quis risus eget urna mollis ornare vel eu leo.",
     "contacts": [
       "https://www.facebook.com/zuck",
-      "https://www.facebook.com/zuck",
-      "https://twitter.com/elonmusk?lang=uk",
+      "https://google.com/?hl=ru",
+      "https://ru.linkedin.com/in/%D1%81%D0%B5%D1%80%D0%B3%D0%B5%D0%B9-%D1%82%D0%BE%D0%BB%D0%BF%D1%8B%D0%B3%D0%B8%D0%BD-468a65aa?trk=people-guest_people_search-card",
       "https://twitter.com/elonmusk?lang=uk"
     ],
     "profilePicture": "./assets/images/team-1.jpg"
@@ -17,9 +17,9 @@
     "description": "Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Maecenas sed diam eget risus varius blandit sit amet non magna. Nullam quis risus eget urna mollis ornare vel eu leo.",
     "contacts": [
       "https://www.facebook.com/zuck",
-      "https://www.facebook.com/zuck",
+      "https://ru.linkedin.com/in/%D1%81%D0%B5%D1%80%D0%B3%D0%B5%D0%B9-%D1%82%D0%BE%D0%BB%D0%BF%D1%8B%D0%B3%D0%B8%D0%BD-468a65aa?trk=people-guest_people_search-card",
       "https://twitter.com/elonmusk?lang=uk",
-      "https://twitter.com/elonmusk?lang=uk"
+      "https://google.com/?hl=ru"
     ],
     "profilePicture": "./assets/images/team-2.jpg"
   },
@@ -28,10 +28,15 @@
     "role": "UI Designer",
     "description": "Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Maecenas sed diam eget risus varius blandit sit amet non magna. Nullam quis risus eget urna mollis ornare vel eu leo.",
     "contacts": [
-      "https://www.facebook.com/zuck",
-      "https://www.facebook.com/zuck",
+      "https://google.com/?hl=ru",
+      "https://ru.linkedin.com/in/%D1%81%D0%B5%D1%80%D0%B3%D0%B5%D0%B9-%D1%82%D0%BE%D0%BB%D0%BF%D1%8B%D0%B3%D0%B8%D0%BD-468a65aa?trk=people-guest_people_search-card",
       "https://twitter.com/elonmusk?lang=uk",
-      "https://twitter.com/elonmusk?lang=uk"
+      "https://www.facebook.com/zuck",
+      "https://google.com/?hl=ru",
+      "https://google.com/?hl=ru",
+      "https://google.com/?hl=ru",
+      "https://google.com/?hl=ru",
+      "https://google.com/?hl=ru"
     ],
     "profilePicture": "./assets/images/team-3.jpg"
   },
@@ -40,11 +45,10 @@
     "role": "Data Scientist",
     "description": "Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Maecenas sed diam eget risus varius blandit sit amet non magna. Nullam quis risus eget urna mollis ornare vel eu leo.",
     "contacts": [
-      "https://www.facebook.com/zuck",
-      "https://www.facebook.com/zuck",
       "https://twitter.com/elonmusk?lang=uk",
-      "https://twitter.com/elonmusk?lang=uk"
+      "https://www.facebook.com/zuck",
+      "https://ru.linkedin.com/in/%D1%81%D0%B5%D1%80%D0%B3%D0%B5%D0%B9-%D1%82%D0%BE%D0%BB%D0%BF%D1%8B%D0%B3%D0%B8%D0%BD-468a65aa?trk=people-guest_people_search-card"
     ],
-    "profilePicture": "./assets/images/team-4.jpg"
+    "profilePicture": "./assets/images/team- 4.jpg"
   }
 ]

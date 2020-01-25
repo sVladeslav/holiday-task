@@ -1,7 +1,7 @@
-@import "break-points";
+@import "../../../assets/scss/break-points";
 
 #banner {
-  background-image: url("../images/banner.jpg");
+  background-image: url("../../../assets/images/banner.jpg");
   height: 750px;
   //width: 98.9vw;
   z-index: 1;
@@ -17,7 +17,7 @@
   justify-content: space-between;
   align-items: center;
 
-  transition: height 0.5s;
+  transition: height 0.2s;
 
   @media screen and (min-width: $lg) {
     padding: 0 8vw;

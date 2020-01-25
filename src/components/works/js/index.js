@@ -1,4 +1,5 @@
 'use strict';
+import '../scss/works.scss'
 
 const workCard = document.querySelector('.workCard');
 const works = document.getElementsByClassName('work');
@@ -27,4 +28,4 @@ const changeWorkCard = img => {
 
 closeButton.onclick = () => {
     workCard.classList.toggle('openWorkCard');
-}
+};
