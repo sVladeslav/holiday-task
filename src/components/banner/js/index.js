@@ -6,6 +6,14 @@ import '../scss/navigation.scss';
 const menu = document.querySelector('.menu');
 const burger = document.getElementById("burgerContainer");
 const header = document.querySelector(".header");
+const navItems = document.querySelectorAll('.menu>ul>li>a');
+
+navItems.forEach( item => {
+    item.onclick = function () {
+        menu.classList.remove('openMenu');
+        burger.classList.remove('change');
+    }
+});
 
 window.addEventListener('scroll', fixedHeader);
 
